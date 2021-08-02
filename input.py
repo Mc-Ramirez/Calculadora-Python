@@ -1,6 +1,16 @@
-nombre = input('Ingrese un nombre: ')
-listaNombres = ['Francisco', 'Roberto', 'Felipe', 'Ana', 'Laura']
-if listaNombres.count(nombre) > 0:
-    print('El nombre', nombre, 'si esta guardado')
+first = input('Ingrese el primero numero: ')
+try:
+    first = int(first)
+except:
+    first = 'cadena'
+
+second = input('Ingrese el segundo numero: ')
+try:
+    second = int(second)
+except:
+    second = 'cadena'
+
+if first == 'cadena' or second == 'cadena':
+    print('Ingresaste mal los dos o uno de los datos, prueba otra vez y solo con numeros')
 else:
-    print('El nombre no esta guardado')
+    print(first + second)
