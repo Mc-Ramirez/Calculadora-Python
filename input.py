@@ -1,20 +1,31 @@
-first = input('Ingrese el primero numero: ')
+first = input('Enter a number: ')
 try:
     first = int(first)
 except:
-    first = 'cadena'
-if first == 'cadena':
-    print('El valor ingresado no es un numero')
+    first = 'string'
+if first == 'string':
+    print('The value entered is not a number')
     exit()
 
-second = input('Ingrese el segundo numero: ')
+second = input('Enter a number: ')
 try:
     second = int(second)
 except:
-    second = 'cadena'
-if second == 'cadena':
-    print('El valor ingresado no es un numero')
+    second = 'string'
+if second == 'string':
+    print('The value entered is not a number')
     exit()
 
-
-print(first + second)
+symbol = input('Type the symbol of the operation you want to perform: ')
+if symbol == '+':
+    print('Suma: ', first + second)
+elif symbol == '-':
+    print('Resta: ', first - second)
+elif symbol == '/':
+    print('Divide: ', first / second)
+elif symbol == '*':
+    print('Multiplica: ', first + second)
+elif symbol == '%':
+    print('Resto: ', first % second)
+else:
+    print('Esta operacion no puede realizarse o no existe')
